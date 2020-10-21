@@ -1,20 +1,26 @@
 let elements, sorter;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  elements = new Array(windowWidth/10);
-  stroke(1);
-  for (let i = 0; i < windowWidth/10; i++) {
-    elements[i] = floor(random() * windowHeight) + 1;
+  canvas = createCanvas(windowWidth-(windowWidth*0.2), windowHeight-(windowHeight*0.2));
+  canvas.parent('container');
+  elements = new Array(floor(width/10));
+  stroke(100);
+  c = color('#bedbbb');
+  fill(c);
+  for (let i = 0; i < width/10; i++) {
+    elements[i] = floor(random() * height) + 1;
   }
   sorter = selectionSort();
+  // noLoop();
 }
 
 function draw() {
-  background(127);
+  c = color('#e8ded2')
+  background(c);
   let x = 0;
   for (let i = 0; i < elements.length; i++) {
-    rect(x, windowHeight-elements[i], 10, elements[i]);
+    print(width/elements.length);
+    rect(x, height-elements[i], floor(width/elements.length), elements[i]);
     x += 10;
   }
   if (sorter.next().done) {

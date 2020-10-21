@@ -1,8 +1,35 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: lightgray;
 }
 
 canvas {
-  display: block;
+  border-radius: 10px;
+  border: 1px solid black;
 }
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2em;
+}
+
+select {
+  padding: 0.5em 1em;
+  color: #333333;
+  background-color: #eeeeee;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
