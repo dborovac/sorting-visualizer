@@ -6,24 +6,33 @@
 
     <title>sorting visualizer</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">      
 
+    <script src="https://kit.fontawesome.com/423ba5cb58.js" crossorigin="anonymous"></script>
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
 
   <body onLoad="document.getElementById('select').options[0].selected = 'selected';">        
+    <div id="navigation">
+      <p class="text">text</p>
       <div class="menu">
         <select id="select">
           <option value="selection-sort">selection sort</option>
           <option value="bubble-sort">bubble sort</option>
+          <option value="quick-sort">quick sort</option>
         </select>   
         <button id="start">start</button> 
         <button id="reset">reset</button>
       </div>
-      <div id="container"></div>    
-      <script src="dom.js"></script>
-      <script src="sketch.js"></script>
-      <script src="algos.js"></script>
+      <a href="https://github.com/dborovac/sorting-visualizer" target="_blank" class="github">
+        <i class="fab fa-github fa-3x"></i>
+      </a>      
+    </div>      
+    <div id="container"></div>    
+    <script src="src/dom.js"></script>
+    <script src="src/sketch.js"></script>
+    <script src="src/algos.js"></script>
   </body>
 </html>

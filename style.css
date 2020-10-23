@@ -1,9 +1,13 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background-color: lightgray;
+  background-color: #389393;
 }
 
 canvas {
@@ -15,13 +19,26 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5em;
+  margin-top: 1em;
+}
+
+#navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1.2em;
+}
+
+.text {
+  place-self: center;
+  color: white;
+  visibility: hidden;
 }
 
 .menu {
   display: flex;
   justify-content: center;
-  margin-top: 1.2em;
+  place-self: center;
+  height: 60%;
 }
 
 #select {
@@ -35,8 +52,19 @@ canvas {
 }
 
 button {  
-  background-color: #bedbbb;
+  background-color: #f5a25d;
   border: 1px solid black;
   border-radius: 6px;
   margin-right: 1em;
+  cursor: pointer;
+}
+
+.github {
+  text-decoration: none;
+  justify-self: start;
+  color: white;
+}
+
+.github:hover {
+  color: #f5a25d;
 }
